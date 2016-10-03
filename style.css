@@ -1,0 +1,47 @@
+body{
+  text-align: center;
+}
+
+aside {
+  display:inline-block;
+  margin: 40px 0 0 80px;
+}
+
+span {
+  display: block;
+  margin: 20px 0;
+}
+
+.container {
+  width: 900px;
+  height: 700px;
+  background-color: #6b8ffe;
+  margin: 0 auto;
+  align-self: center;
+  border-radius: 10px;
+}
+
+/*.box {
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px;
+  /*border-color: red;*/
+  /*border-width: 50px;*/
+  /*background-color: red;*/
+  /*background-image: url("assets/soccerball.png");
+  z-index: 9999;
+  display: inline-block;
+}*/*/
+
+/*.ball {
+  background-color: black;
+  background-image: url("assets/soccerball.png");
+  width: 10px;
+  height: 20px;
+  z-index: 9999;
+}
+
+#canvas {
+  background.src : "assets/pitch.png";
+  z-index: 9999;600
+}*/
