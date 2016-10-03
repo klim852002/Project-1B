@@ -16,12 +16,14 @@ $(document).ready(function () {
   var timerID
 
 // innitiate event listener for start button to start game
+
   $startBtn.on('click', startGame)
   // invoke random balls to appear within the canvas, with random duration
   function startGame () {
     // var time = Math.random() * 4000
     countDown -= 1
-    timerID = window.setTimeout(ballGenerator, Math.random() * 1000)
+    console.log(countDown)
+    timerID = window.setTimeout(ballGenerator, 2000)
     function ballGenerator () {
       // function to generate ball to appear randomly
       // function getpos(min, max) {
@@ -35,17 +37,20 @@ $(document).ready(function () {
       // console.log(startGame())
     }
   };
-  startGame()
+  // startGame()
+// to remove ball randomly between 0.5 sec and 2secs
+      // if (Math.random()*2000 > 500) {
+          // window.clearTimeout(timerID)
+      // }
 // once ball appear, event listener for on click, ball disappear
 // each successful click, scores 1 point
-    // ball.on('click', function)
-        // ball.remove()
+  // function clickBall () {
+  //   ball.on('click', removeBall)
+  //   function removeBall () {
+  //     ball.remove();
+  //   }
+  // }
+    //
         // score ++;
-
-// to remove ball randomly between 0.5 sec and 2secs
-    // if (Math.random()*2000 > 0.5) {
-        // window.clearTimeout(timerID)
-    // }
-
 // game ends at end of countdown timer
 })
