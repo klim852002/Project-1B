@@ -3,12 +3,14 @@ body{
 }
 
 aside {
-  display:inline-block;
+  display:block;
+  width: 200px;
+  height: 100px;
   margin: 40px 0 0 80px;
 }
 
 span {
-  display: block;
+  display: inline-block;
   margin: 20px 0;
 }
 
