@@ -12,6 +12,7 @@ $(document).ready(function () {
 
   function startGame () {
     ballGenerator()
+    window.setInterval(ballGenerator, 2000)
   }
 
   // get posX at a time
@@ -47,10 +48,10 @@ $(document).ready(function () {
   }
 
   // function clearBall () {
-  //   window.setTimeout(setBackground, 2000)
+  //   window.setInterval(ballGenerator, 2000)
   //   alert ('new pitch!')
   // }
-  //
+
   // function setBackground () {
   //   ctx.drawImage(background, 0, 0, 700, 500)
   //   }
@@ -66,7 +67,7 @@ $(document).ready(function () {
     var clickY = ballPosition.getPosY()
   if (x >= clickX * 650 && x <= clickX * 650 + 50 && y >= clickY * 450 && y <= clickY * 450 + 50) {
     // window.alert('hamtam bola!')
-    ballGenerator()
+    ctx.drawImage(background, 0, 0, 700, 500)
     score++
     console.log(score)
     console.log(ballPosition.getPosX(), ballPosition.getPosY())
