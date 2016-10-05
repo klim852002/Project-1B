@@ -1,14 +1,24 @@
+/*html {
+
+}*/
+
 body{
   text-align: center;
+  font-family: 'Wallpoet', cursive;
+  /*background: url('assets/track.png')no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;;*/
 }
 
 aside {
   display:inline-block;;
   width: 150px;
   height: 100px;
-  margin: 20px 50px 0 0;
+  margin: 20px 10px 0 0;
   position: absolute;
-  left: 1000px;
+  left: 1020px;
 }
 
 span {
@@ -25,7 +35,7 @@ h2 { font-size: 20px;
 
 }
 
-span {
+span { font-size: 30px;
 
 }
 
@@ -34,8 +44,8 @@ div {
 }
 
 .container {
-  width: 900px;
-  height: 650px;
+  width: 950px;
+  height: 600px;
   background-color: #6b8ffe;
   margin: 0 auto;
   align-self: left;

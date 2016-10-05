@@ -11,21 +11,41 @@ $(document).ready(function () {
   background.src = 'assets/pitch.png'
   ctx.drawImage(background, 0, 0, 700, 500)
 
+  var $aside = $('aside')
+  var $reStartBtn = $('<button>')
+  $reStartBtn.addClass('btn btn-xl btn-lg')
+  $reStartBtn.text('REPLAY')
+// start button to run startGame function
   $startBtn.on('click', startGame)
+// on click of start button, button changes to play again button to allow reset of game
+  $startBtn.click(function () {
+    $(this).remove()
+    $aside.prepend($reStartBtn)
+    // $aside.prepend('<button class = "btn btn-xl btn-lg" id="reStartBtn" name="restartBtn">REPLAY</button>')
+  })
+  // document.styleSheets
 
+// function to reload page upon clicking of play again button
+  $reStartBtn.on('click', reload)
+  function reload () {
+    // alert('reload')
+    window.location.reload()
+  }
+// function startGame runs ballGenerator function and starts countdown timer
   function startGame () {
     ballGenerator()
     window.setInterval(ballGenerator, 1200)
-    countDownID = window.setInterval(countDown, 1000);
+    window.setInterval(countDown, 1000)
   }
+// function for countdown timer
   function countDown () {
     timer -= 1
     clock.textContent = timer
     if (timer === 0) {
       alert("'Time's up!, your score is " + scoreLine)
+      window.location.reload()
     }
   }
-
   // get posX at a time
   function position () {
     var posX = Math.random()
@@ -65,16 +85,12 @@ $(document).ready(function () {
     var clickX = ballPosition.getPosX()
     var clickY = ballPosition.getPosY()
     if (x >= clickX * 650 && x <= clickX * 650 + 50 && y >= clickY * 450 && y <= clickY * 450 + 50) {
-    // window.alert('hamtam bola!')
       ctx.drawImage(background, 0, 0, 700, 500)
       scoreLine++
       score.textContent = scoreLine
       console.log(scoreLine)
+// check if the ball is clicked within the posX or and posY
       console.log(ballPosition.getPosX(), ballPosition.getPosY())
     }
-  // check if the ball is clicked within the posX or and posY
   }
-  // function showScore () {
-  //   score.textContent = scoreLine
-  // }
 })

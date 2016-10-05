@@ -22,6 +22,10 @@ $(document).ready(function () {
   var timerID
   var $clock = $('#clock')
   // console.log(typeof ball)
+  // function to change start button to try again
+  $startBtn.click(function () {
+      $(this).remove()
+  })
 // initiate event listener for start button to start game
   $startBtn.on('click', startGame)
 // function to start game, initiate clock countdown and set ball to be generated at 0.5 secs mark
