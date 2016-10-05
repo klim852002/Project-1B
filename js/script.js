@@ -80,10 +80,10 @@ $(document).ready(function () {
     console.log('eclienty is' + e.clientY)
 // check x/y coordinate against the image position and dimension
   // var apple = ballGenerator()
-    // if (x >= apple.getPosX() * 650 && x <= (apple.getPosX() * 650 + 50) &&
-    //   y >= apple.getPosY() * 450 && y <= (apple.getPosY() * 450 + 50)) {
-  if (x >= 50 && x <= (50 + ball.width) &&
-      y >= 50 && y <= (50 + ball.height)) {
+    if (x >= apple.getPosX() * 650 && x <= (apple.getPosX() * 650 + 50) &&
+      y >= apple.getPosY() * 450 && y <= (apple.getPosY() * 450 + 50)) {
+  // if (x >= 50 && x <= (50 + ball.width) &&
+  //     y >= 50 && y <= (50 + ball.height)) {
       window.alert('hamtam bola!')
       score++
       var ballPosition = ballGenerator() // returns PosX and PosY
