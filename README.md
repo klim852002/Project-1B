@@ -24,3 +24,5 @@ Thanks
 Prima: Much help in refactoring my codes which were getting increasingly messy and confusing at one point, even to myself. And for telling me that drawing anything over canvas means that it cannot be picked up and identified as an object.
 Kailin and Glen: The early part of the project needed direction and they provided much guidance on the technical issues. Many of my questions were really amateurish but both TAs showed great patience.
 WDI 6: Every single feedback and suggestions given, of which there were many. Alex and Zhi Hong, who have been sitting beside me for the past few days were my go-to guys and helped to look through my codes when I got really stuck. Chris, Fauzi and Huda gave great suggestions on finetuning the game.
+
+Link to game:  https://klim852002.github.io/Project-1B/
