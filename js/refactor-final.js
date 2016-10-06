@@ -4,9 +4,11 @@ $(document).ready(function () {
   var clock = document.getElementById('clock')
   var score = document.getElementById('score')
   var $startBtn = $('#startBtn')
+// setting up variables for canvas
   var canvas = document.getElementById('canvas')
   var ctx = canvas.getContext('2d')
   var background = new Image()
+// drawing pitch canvas
   background.src = 'assets/pitch.png'
   ctx.drawImage(background, 0, 0, 700, 500)
 // add restart button
@@ -20,7 +22,6 @@ $(document).ready(function () {
   $startBtn.click(function () {
     $(this).remove()
     $aside.prepend($reStartBtn)
-    // $aside.prepend('<button class = "btn btn-xl btn-lg" id="reStartBtn" name="restartBtn">REPLAY</button>')
   })
 // function to reload page upon clicking of play again button
   $reStartBtn.on('click', reload)
@@ -85,7 +86,6 @@ $(document).ready(function () {
     var dSquare = (x - circleX) * (x - circleX) + (y - circleY) * (y - circleY)
     console.log(dSquare)
     if (dSquare < 625) {
-// if (x >= clickX * 650 && x <= clickX * 650 + 50 && y >= clickY * 450 && y <= clickY * 450 + 50) {
       ctx.drawImage(background, 0, 0, 700, 500)
       scoreLine++
       score.textContent = scoreLine
