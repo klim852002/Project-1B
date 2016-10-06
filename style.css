@@ -1,15 +1,6 @@
-/*html {
-
-}*/
-
 body{
   text-align: center;
   font-family: 'Wallpoet', cursive;
-  /*background: url('assets/track.png')no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;;*/
 }
 
 h1 {
@@ -21,7 +12,6 @@ aside {
   width: 150px;
   height: 100px;
   margin: 20px 10px 0 20px;
-  /*position: absolute;*/
   left: 1020px;
 }
 
@@ -54,30 +44,4 @@ div {
   margin: 0 auto;
   align-self: left;
   border-radius: 10px;
-  /*position: relative;*/
 }
-
-/*.box {
-  width: 150px;
-  height: 150px;
-  margin: 10px 15px;
-  /*border-color: red;*/
-  /*border-width: 50px;*/
-  /*background-color: red;*/
-  /*background-image: url("assets/soccerball.png");
-  z-index: 9999;
-  display: inline-block;
-}*/*/
-
-/*.ball {
-  background-color: black;
-  background-image: url("assets/soccerball.png");
-  width: 10px;
-  height: 20px;
-  z-index: 9999;
-}
-
-#canvas {
-  background.src : "assets/pitch.png";
-  z-index: 9999;600
-}*/

@@ -58,7 +58,6 @@ $(document).ready(function () {
       }
     }
   }
-  // var ballPosition = {}
   // Generate new ball at different position everytime
   function ballGenerator () {
     ballPosition = position()
