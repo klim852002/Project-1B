@@ -31,25 +31,19 @@ $(document).ready(function () {
 // function startGame runs ballGenerator function and starts countdown timer
   function startGame () {
     ballGenerator()
-    var ballId = window.setInterval(ballGenerator, 1200)
+    window.setInterval(ballGenerator, 900)
     window.setInterval(countDown, 1000)
   }
 // function for countdown timer
   function countDown () {
     timer -= 1
     clock.textContent = timer
-    levelCheck ()
-  }
-  function levelCheck () {
-    if (timer === 0 || scoreLine >= 5) {
-      window.alert("On to the next level")
-      nextLevel()
-    } else if (timer === 0 && scoreLine < 5) {
+    if (timer === 0) {
       window.alert("'Time's up! your score is " + scoreLine)
       window.location.reload()
     }
   }
-  // function to return posX and PosY of ball
+  // get and return randomised number posX and posY for generating position of ball
   function position () {
     var posX = Math.random()
     var posY = Math.random()
@@ -64,23 +58,22 @@ $(document).ready(function () {
     }
   }
   // var ballPosition = {}
-
   // Generate new ball at different position everytime
   function ballGenerator () {
     ballPosition = position()
     ballX = ballPosition.getPosX()
     ballY = ballPosition.getPosY()
-
-    // console.log(ballX, ballY)
+  // draw pitch
     ctx.drawImage(background, 0, 0, 700, 500)
     var ball = new Image()
     ball.src = 'assets/soccerball.png'
+  // draw ball image on canvas
     ball.onload = function () {
       ctx.drawImage(ball, ballX * 650, ballY * 450, 50, 50)
     }
   }
+  // event listener to detect if click falls on the ball
   canvas.addEventListener('click', canvasClick)
-
   function canvasClick (e) {
     var rect = this.getBoundingClientRect()
     var x = e.clientX - rect.left // mouse position
@@ -90,25 +83,12 @@ $(document).ready(function () {
     var circleX = clickX * 650 + 25 // center of circle
     var circleY = clickY * 450 + 25 // center of circle
     var dSquare = (x - circleX) * (x - circleX) + (y - circleY) * (y - circleY)
-    // console.log(circleX)
-    // console.log(circleY)
     console.log(dSquare)
     if (dSquare < 625) {
-    // if (x >= clickX * 650 && x <= clickX * 650 + 50 && y >= clickY * 450 && y <= clickY * 450 + 50) {
+// if (x >= clickX * 650 && x <= clickX * 650 + 50 && y >= clickY * 450 && y <= clickY * 450 + 50) {
       ctx.drawImage(background, 0, 0, 700, 500)
-      increaseScore()
+      scoreLine++
+      score.textContent = scoreLine
     }
   }
-  function increaseScore () {
-    scoreLine++
-    score.textContent = scoreLine
-  }
-  // function nextLevel () {
-  //   alert('nextLevel')
-  //   timer = 60
-  //   scoreLine = 0
-  //   increaseScore ()
-  //   window.clearInterval(ballId)
-  //   // window.setInterval(ballGenerator, 5000)
-  // }
 })
