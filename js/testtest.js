@@ -39,7 +39,7 @@ $(document).ready(function () {
     timer -= 1
     clock.textContent = timer
     if (timer === 0) {
-      alert("'Time's up!, your score is " + scoreLine)
+      window.alert("'Time's up!, your score is " + scoreLine)
       window.location.reload()
     }
   }
@@ -65,7 +65,7 @@ $(document).ready(function () {
     ballX = ballPosition.getPosX()
     ballY = ballPosition.getPosY()
 
-    console.log(ballX, ballY)
+    // console.log(ballX, ballY)
     ctx.drawImage(background, 0, 0, 700, 500)
     var ball = new Image()
     ball.src = 'assets/soccerball.png'
@@ -77,17 +77,24 @@ $(document).ready(function () {
 
   function canvasClick (e) {
     var rect = this.getBoundingClientRect()
-    var x = e.clientX - rect.left
-    var y = e.clientY - rect.top
+    var x = e.clientX - rect.left // mouse position
+    var y = e.clientY - rect.top // mouse position
     var clickX = ballPosition.getPosX()
     var clickY = ballPosition.getPosY()
-    if (x >= clickX * 650 && x <= clickX * 650 + 50 && y >= clickY * 450 && y <= clickY * 450 + 50) {
+    var circleX = clickX * 650 + 25 // center of circle
+    var circleY = clickY * 450 + 25 // center of circle
+    var dSquare = (x - circleX) * (x - circleX) + (y - circleY) * (y - circleY)
+    // console.log(circleX)
+    // console.log(circleY)
+    console.log(dSquare)
+    if (dSquare < 625) {
+    // if (x >= clickX * 650 && x <= clickX * 650 + 50 && y >= clickY * 450 && y <= clickY * 450 + 50) {
       ctx.drawImage(background, 0, 0, 700, 500)
       scoreLine++
       score.textContent = scoreLine
-      console.log(scoreLine)
+      // console.log(scoreLine)
 // check if the ball is clicked within the posX or and posY
-      console.log(ballPosition.getPosX(), ballPosition.getPosY())
+      // console.log(ballPosition.getPosX(), ballPosition.getPosY())
     }
   }
 })
