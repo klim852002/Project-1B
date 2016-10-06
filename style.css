@@ -20,8 +20,8 @@ aside {
   display:inline-block;;
   width: 150px;
   height: 100px;
-  margin: 20px 10px 0 0;
-  position: absolute;
+  margin: 20px 10px 0 20px;
+  /*position: absolute;*/
   left: 1020px;
 }
 
@@ -35,11 +35,11 @@ canvas {
   margin: 20px 0 0 30px
 }
 
-h2 { font-size: 20px;
+h2 { font-size: 25px;
 
 }
 
-span { font-size: 40px;
+span { font-size: 45px;
 
 }
 

@@ -97,4 +97,8 @@ $(document).ready(function () {
       // console.log(ballPosition.getPosX(), ballPosition.getPosY())
     }
   }
+  // function level2 () {
+  // ballGenerator()
+  // window.setInterval(ballGenerator, 800)
+  // }
 })
